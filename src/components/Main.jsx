@@ -1,16 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Column from "./Column";
 import AddTask from "./AddTask";
 import styles from "./Main.module.css";
 
 function Main() {
-  const initialTasks = [
-    { id: 1, text: "Изучить хуки", status: "План" },
-    { id: 2, text: "Сверстать шапку", status: "В работе" },
-    { id: 3, text: "Настроить Vite", status: "Готово" },
-  ];
+  const [tasks, setTasks] = useState(() => {
+    const saved = localStorage.getItem("tasks");
+    return saved ? JSON.parse(saved) : [];
+  });
 
-  const [tasks, setTasks] = useState(initialTasks);
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   const handleAddTask = (taskText) => {
     const newTask = {
