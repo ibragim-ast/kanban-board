@@ -22,6 +22,18 @@ function Main() {
     setTasks([...tasks, newTask]);
   };
 
+  const handleMoveTask = (taskId, newStatus) => {
+    setTasks(
+      tasks.map((task) => {
+        if (task.id === taskId) {
+          return { ...task, status: newStatus };
+        } else {
+          return task;
+        }
+      }),
+    );
+  };
+
   const handleDeleteTask = (taskId) => {
     setTasks(tasks.filter((task) => task.id !== taskId));
   };
@@ -33,16 +45,19 @@ function Main() {
           title="План"
           columnTasks={tasks.filter((item) => item.status === "План")}
           onDelete={handleDeleteTask}
+          onMove={handleMoveTask}
         />
         <Column
           title="В работе"
           columnTasks={tasks.filter((item) => item.status === "В работе")}
           onDelete={handleDeleteTask}
+          onMove={handleMoveTask}
         />
         <Column
           title="Готово"
           columnTasks={tasks.filter((item) => item.status === "Готово")}
           onDelete={handleDeleteTask}
+          onMove={handleMoveTask}
         />
       </main>
       <AddTask onAdd={handleAddTask} />
