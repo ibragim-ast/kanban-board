@@ -1,8 +1,9 @@
 import TaskCard from "./TaskCard";
+import styles from "./Column.module.css";
 
 function Column({ title, columnTasks, onDelete, onMove }) {
   return (
-    <div>
+    <div className={styles.column}>
       <h2>{title}</h2>
       {columnTasks.map((task) => (
         <TaskCard

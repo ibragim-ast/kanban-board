@@ -1,5 +1,59 @@
 .card {
-  border: 1px solid white;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
   padding: 20px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 165, 0, 0.4);
+}
+
+.text {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.statusSelect {
+  background: #252525;
+  color: #ffa500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 6px 12px;
+  outline: none;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background: transparent;
+  color: #6b7280;
+  border: none;
+  padding: 8px;
   border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.deleteBtn:hover {
+  background: rgba(255, 95, 86, 0.1);
+  color: #ff5f56;
+  transform: scale(1.1);
 }
