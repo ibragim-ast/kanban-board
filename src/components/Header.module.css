@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  padding: 20px 40px;
+  width: 100%;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 24px;
+}
+
+.logo {
+  font-size: 24px;
+  font-family: "Inter", sans-serif;
+}
+
+.logoBold {
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.logoDot {
+  color: #ffa500; /* Наш теплый янтарный акцент */
+  font-weight: 900;
+}
+
+.logoLight {
+  font-weight: 300;
+  color: #a0aec0;
+}

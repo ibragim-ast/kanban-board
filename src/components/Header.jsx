@@ -1,7 +1,13 @@
+import styles from "./Header.module.css";
+
 function Header() {
   return (
-    <header>
-      <h1>Kanban Трекер Задач</h1>
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <span className={styles.logoBold}>Ibragim</span>
+        <span className={styles.logoDot}>.</span>
+        <span className={styles.logoLight}>Ast</span>
+      </div>
     </header>
   );
 }

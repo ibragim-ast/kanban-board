@@ -1,5 +1,10 @@
 .main {
   display: flex;
+  flex-direction: column;
+}
+
+.columns {
+  display: flex;
   justify-content: center;
   gap: 24px;
   padding: 40px;

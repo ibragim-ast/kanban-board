@@ -42,24 +42,27 @@ function Main() {
   return (
     <>
       <main className={styles.main}>
-        <Column
-          title="План"
-          columnTasks={tasks.filter((item) => item.status === "План")}
-          onDelete={handleDeleteTask}
-          onMove={handleMoveTask}
-        />
-        <Column
-          title="В работе"
-          columnTasks={tasks.filter((item) => item.status === "В работе")}
-          onDelete={handleDeleteTask}
-          onMove={handleMoveTask}
-        />
-        <Column
-          title="Готово"
-          columnTasks={tasks.filter((item) => item.status === "Готово")}
-          onDelete={handleDeleteTask}
-          onMove={handleMoveTask}
-        />
+        <h1>Трекер задач</h1>
+        <div className={styles.columns}>
+          <Column
+            title="План"
+            columnTasks={tasks.filter((item) => item.status === "План")}
+            onDelete={handleDeleteTask}
+            onMove={handleMoveTask}
+          />
+          <Column
+            title="В работе"
+            columnTasks={tasks.filter((item) => item.status === "В работе")}
+            onDelete={handleDeleteTask}
+            onMove={handleMoveTask}
+          />
+          <Column
+            title="Готово"
+            columnTasks={tasks.filter((item) => item.status === "Готово")}
+            onDelete={handleDeleteTask}
+            onMove={handleMoveTask}
+          />
+        </div>
       </main>
       <AddTask onAdd={handleAddTask} />
     </>

@@ -18,7 +18,7 @@ function AddTask({ onAdd }) {
         type="text"
         value={text}
         onChange={(event) => setText(event.target.value)}
-        placeholder="Что нужно сделать?"
+        placeholder="Добавьте задачу"
       />
       <button className={styles.addBtn} type="submit">
         Добавить
