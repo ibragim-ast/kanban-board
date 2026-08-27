@@ -43,6 +43,7 @@ function Main() {
     <>
       <main className={styles.main}>
         <h1>Трекер задач</h1>
+        <AddTask onAdd={handleAddTask} />
         <div className={styles.columns}>
           <Column
             title="План"
@@ -64,7 +65,6 @@ function Main() {
           />
         </div>
       </main>
-      <AddTask onAdd={handleAddTask} />
     </>
   );
 }
