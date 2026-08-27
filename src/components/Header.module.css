@@ -26,3 +26,10 @@
   font-weight: 300;
   color: #a0aec0;
 }
+
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    padding: 15px;
+  }
+}

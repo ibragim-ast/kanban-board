@@ -9,3 +9,10 @@
   gap: 24px;
   padding: 40px;
 }
+
+@media (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+    align-items: center;
+  }
+}
